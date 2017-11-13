@@ -12,14 +12,14 @@ Create a directory named “data” in the same file as the .jar, then place the
 Pressing tab while in the command box activates autocomplete
 
 === Example:
-**Input:** ‘ad’ +
-**Expected result:** Autocorrects to ‘add’ +
-**Input:** ‘e’ +
-**Expected result:** A dropdown box appears with all possible commands for e, including exit, export, and edit +
-**Input:** ‘xl’ +
-**Expected result:** The text turns red because there is no possible command for the given input +
-**Input:** ‘add’ +
-**Expected result:** Since this is a valid command, the parameters for the command are displayed so that the user can check without having the command fail +
+**Input:** ‘ad’  
+**Expected result:** Autocorrects to ‘add’  
+**Input:** ‘e’  
+**Expected result:** A dropdown box appears with all possible commands for e, including exit, export, and edit  
+**Input:** ‘xl’  
+**Expected result:** The text turns red because there is no possible command for the given input  
+**Input:** ‘add’  
+**Expected result:** Since this is a valid command, the parameters for the command are displayed so that the user can check without having the command fail  
 
 == Testing Groups
 === Command Format
@@ -29,20 +29,20 @@ Pressing tab while in the command box activates autocomplete
 * `group [GROUP NAME] [NAMES...]` creates a group called [GROUP NAME] and will add the people in the following arguments (NAMES…) to it
 
 === Creating new group with people
-**Command:** `group trip Alex Bernice Grant` +
-**Expected result:** Creates a group called trip with Alex, Bernice, and Grant +
+**Command:** `group trip Alex Bernice Grant`  
+**Expected result:** Creates a group called trip with Alex, Bernice, and Grant  
 
 === Deleting group
-**Command:** `group trip` +
-**Expected result:** Deletes the previously created 'trip' group +
+**Command:** `group trip`  
+**Expected result:** Deletes the previously created 'trip' group  
 
 === Creating new group without members
-**Command:** `group Vietnam` +
-**Expected result:** creates a new group called Vietnam +
+**Command:** `group Vietnam`  
+**Expected result:** creates a new group called Vietnam  
 
 === Adding persons to existing group
-**Command:** `group Vietnam Alex Bernice Don` +
-**Expected result:** Add Alice, Bernice, and Don to the existing Vietnam group +
+**Command:** `group Vietnam Alex Bernice Don`  
+**Expected result:** Add Alice, Bernice, and Don to the existing Vietnam group  
 
 == Testing Group Filters
 `filter` will attempt to apply the given groupname as a filter to the person display
@@ -50,19 +50,19 @@ Pressing tab while in the command box activates autocomplete
 `filter [groupname]`
 
 === Filtering to default group "none"
-**Command:** `filter none` +
+**Command:** `filter none`  
 **Expected result:** Applies the filter for the group ‘none’ to the displayed person list. This is the default group.
 
 === Applying filter to group
-**Command:** `filter trip` +
+**Command:** `filter trip`  
 **Expected result:** Will change the display to only show people in the ‘trip’ group
 
 === Applying filter to nonexistent group
-**Command:** `filter [nonexistent group]` +
+**Command:** `filter [nonexistent group]`  
 **Expected result:** Returns an error that the group doesn’t exist
 
 === Applying filter to empty group
-**Command:** `filter [empty group]` +
+**Command:** `filter [empty group]`  
 **Expected result:** Returns an error that the group is empty
 
 
@@ -74,12 +74,12 @@ All persons should have a default image when added
 
 === Setting image
 
-**Command:** `image 4 /home/user/somepic.jpg` +
+**Command:** `image 4 /home/user/somepic.jpg`  
 **Expected result:** The command will set the picture “somepic.jpg” for the person at index “4”
 
 === Removing image
-Images can be removed for the person using +
-**Command:** `image INDEX` +
+Images can be removed for the person using  
+**Command:** `image INDEX`  
 **Expected result:** The image for the person at the index will be removed and the default image will be set back
 
 == Testing Export
@@ -89,34 +89,34 @@ Used to export the current working addressbook
 `export [INDEX] [FILEPATH]`
 
 === Export
-**Command:** `export` +
-**Expected result:** The addressbook database and images to the application directory will be exported as “AddressbookData.zip” +
+**Command:** `export`  
+**Expected result:** The addressbook database and images to the application directory will be exported as “AddressbookData.zip”  
 
 === Export to designated filepath
-**Command:** `export /home/user/addressbookfilename` +
-**Expected result:** Will export the addressbook database and images to the filepath as “addressbookfilename.zip” +
+**Command:** `export /home/user/addressbookfilename`  
+**Expected result:** Will export the addressbook database and images to the filepath as “addressbookfilename.zip”  
 
 == Testing Add
 === Command Format
 `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG] [d/EXPIRY DATE]...`
 
 === Adding person with expiry date field
-**Command:** `add n/Kaye Williams p/96182716 e/kayew@example.com a/16-201, North Tower, UTown d/2017-10-10` +
-**Expected result:** A new person “Kaye Williams” with an expiry date 2017-10-10 and other details will be added. New person card will be created with expiry date and other details fields. +
+**Command:** `add n/Kaye Williams p/96182716 e/kayew@example.com a/16-201, North Tower, UTown d/2017-10-10`  
+**Expected result:** A new person “Kaye Williams” with an expiry date 2017-10-10 and other details will be added. New person card will be created with expiry date and other details fields.  
 
 == Testing Edit
 === Command Format
 `edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG] [d/EXPIRY DATE]…​`
 
 === Editing person and adding a new expiry date
-Assuming the person at index 1 has no expiry date initially +
-**Command:** `edit 1 n/Amy Chan d/2017-09-09` +
-**Expected result:** The name of the person at index 1 is changed to “Amy Chan”, expiry date of 2017-09-09 is also added to the person. Person card changes content of name and displays expiry date field. +
+Assuming the person at index 1 has no expiry date initially  
+**Command:** `edit 1 n/Amy Chan d/2017-09-09`  
+**Expected result:** The name of the person at index 1 is changed to “Amy Chan”, expiry date of 2017-09-09 is also added to the person. Person card changes content of name and displays expiry date field.  
 
 === Editing person and his/her existing expiry date
-Assuming the person at index 1 already has an expiry date +
-**Command:** `edit 1 p/12345678 d/2017-10-10` +
-**Expected result:** The phone number of the person is changed to 12345678, his/her expiry date is changed to 2017-10-10. Person card shows the changes correspondingly. +
+Assuming the person at index 1 already has an expiry date  
+**Command:** `edit 1 p/12345678 d/2017-10-10`  
+**Expected result:** The phone number of the person is changed to 12345678, his/her expiry date is changed to 2017-10-10. Person card shows the changes correspondingly.  
 
 == Testing Expire
 By default, a person would not have an expiry date.
@@ -125,17 +125,17 @@ By default, a person would not have an expiry date.
 `expire INDEX [d/EXPIRY DATE]`
 
 === Adding expiry date
-**Command:** `expire 1 d/2012-01-01` +
-**Expected result:** Expiry date of person at index 1 set to 2012-01-01. Person card shows the newly added expiry date +
+**Command:** `expire 1 d/2012-01-01`  
+**Expected result:** Expiry date of person at index 1 set to 2012-01-01. Person card shows the newly added expiry date  
 
 === Editing expiry date
-Assuming the person at index 1 already has an expiry date, to edit the date, do the following: +
-**Command:** `expire 1 d/2017-09-09` +
-**Expected result:** Expiry date of the person now set to 2017-09-09. Person card shows the new expiry date. +
+Assuming the person at index 1 already has an expiry date, to edit the date, do the following:  
+**Command:** `expire 1 d/2017-09-09`  
+**Expected result:** Expiry date of the person now set to 2017-09-09. Person card shows the new expiry date.  
 
 === Removing expiry date
-Assuming the person at index 1 already has an expiry date, to remove the expiry date, do the following: +
-**Command:** `expire 1` +
+Assuming the person at index 1 already has an expiry date, to remove the expiry date, do the following:  
+**Command:** `expire 1`  
 **Expected result:** Expiry date of the person at index 1 removed. Person card no longer has the expiry date field.
 
 === Using invalid date combination
