@@ -2,6 +2,7 @@
 
 == How to load sample data
 Create a directory named “data” in the same file as the .jar, then place the sampledata.xml into the newly created “data” directory. Rename the file to addressbook.xml.
+---
 
 == Testing Autocomplete
 Pressing tab while in the command box activates autocomplete
@@ -15,6 +16,7 @@ Pressing tab while in the command box activates autocomplete
 **Expected result:** The text turns red because there is no possible command for the given input +
 **Input:** ‘add’ +
 **Expected result:** Since this is a valid command, the parameters for the command are displayed so that the user can check without having the command fail +
+---
 
 == Testing Groups
 === Command Format
@@ -38,6 +40,7 @@ Pressing tab while in the command box activates autocomplete
 === Adding persons to existing group
 **Command:** `group Vietnam Alex Bernice Don` +
 **Expected result:** Add Alice, Bernice, and Don to the existing Vietnam group +
+---
 
 == Testing Group Filters
 `filter` will attempt to apply the given groupname as a filter to the person display
@@ -59,10 +62,9 @@ Pressing tab while in the command box activates autocomplete
 === Applying filter to empty group
 **Command:** `filter [empty group]` +
 **Expected result:** Returns an error that the group is empty
-
+---
 
 == Testing Image
-
 All persons should have a default image when added
 
 === Command Format
@@ -77,7 +79,7 @@ All persons should have a default image when added
 Images can be removed for the person using +
 **Command:** `image INDEX` +
 **Expected result:** The image for the person at the index will be removed and the default image will be set back
-
+---
 
 == Testing Export
 Used to export the current working addressbook
@@ -92,7 +94,7 @@ Used to export the current working addressbook
 === Export to designated filepath
 **Command:** `export /home/user/addressbookfilename` +
 **Expected result:** Will export the addressbook database and images to the filepath as “addressbookfilename.zip” +
-
+---
 
 == Testing Add
 === Command Format
@@ -101,7 +103,7 @@ Used to export the current working addressbook
 === Adding person with expiry date field
 **Command:** `add n/Kaye Williams p/96182716 e/kayew@example.com a/16-201, North Tower, UTown d/2017-10-10` +
 **Expected result:** A new person “Kaye Williams” with an expiry date 2017-10-10 and other details will be added. New person card will be created with expiry date and other details fields. +
-
+---
 
 == Testing Edit
 === Command Format
@@ -116,7 +118,7 @@ Assuming the person at index 1 has no expiry date initially +
 Assuming the person at index 1 already has an expiry date +
 **Command:** `edit 1 p/12345678 d/2017-10-10` +
 **Expected result:** The phone number of the person is changed to 12345678, his/her expiry date is changed to 2017-10-10. Person card shows the changes correspondingly. +
-
+---
 
 == Testing Expire
 By default, a person would not have an expiry date.
