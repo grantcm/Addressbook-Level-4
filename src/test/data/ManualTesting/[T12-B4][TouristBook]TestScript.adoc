@@ -137,3 +137,11 @@ Assuming the person at index 1 already has an expiry date, to edit the date, do 
 Assuming the person at index 1 already has an expiry date, to remove the expiry date, do the following: +
 **Command:** `expire 1` +
 **Expected result:** Expiry date of the person at index 1 removed. Person card no longer has the expiry date field.
+
+=== Using invalid date combination
+**Command:** `expire 1 d/2017-02-30`
+**Expected result:** Will show error indicating that the date is invalid.
+
+=== Using incorrect date format
+**Command:** `expire 1 d/02-02-2017`
+**Expected result:** Will show error indicating that the format is incorrect (should be YYYY-MM-DD).
