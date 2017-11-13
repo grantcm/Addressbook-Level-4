@@ -423,13 +423,13 @@
      * @param options representing potential completion options
      */
     private void showAutoCompleteOptions(List<String> options) {
+        autoCompleteBox.getItems().clear();
         for (String option : options) {
             MenuItem item = new MenuItem(option);
             item.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
                     replaceText(item.getText());
-                    autoCompleteBox.getItems().clear();
                 }
             });
             autoCompleteBox.getItems().add(item);
