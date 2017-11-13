@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addressbook>
+    <persons>
+        <name>Amy Bee</name>
+        <phone>11111111</phone>
+        <email>amy@example.com</email>
+        <address>Block 312, Amy Street 1</address>
+        <remark></remark>
+        <image></image>
+        <expiryDate>2017-09-09</expiryDate>
+        <tagged>friend</tagged>
+        <group>none</group>
+    </persons>
+    <persons>
+        <name>Bob Choo</name>
+        <phone>98765432</phone>
+        <email>johnd@example.com</email>
+        <address>311, Clementi Ave 2, #02-25</address>
+        <remark></remark>
+        <image></image>
+        <expiryDate></expiryDate>
+        <tagged>owesMoney</tagged>
+        <tagged>friends</tagged>
+        <group>none</group>
+    </persons>
+    <persons>
+        <name>Carl Kurz</name>
+        <phone>95352563</phone>
+        <email>heinz@example.com</email>
+        <address>wall street</address>
+        <remark></remark>
+        <image></image>
+        <expiryDate>2017-09-09</expiryDate>
+        <tagged>friends</tagged>
+        <group>none</group>
+    </persons>
+    <persons>
+        <name>Daniel Meier</name>
+        <phone>87652533</phone>
+        <email>cornelia@example.com</email>
+        <address>10th street</address>
+        <remark></remark>
+        <image></image>
+        <expiryDate></expiryDate>
+        <tagged>friends</tagged>
+        <group>none</group>
+    </persons>
+    <persons>
+        <name>Elle Meyer</name>
+        <phone>9482224</phone>
+        <email>werner@example.com</email>
+        <address>michegan ave</address>
+        <remark></remark>
+        <image></image>
+        <expiryDate></expiryDate>
+        <tagged>friends</tagged>
+        <group>none</group>
+    </persons>
+    <persons>
+        <name>Fiona Kunz</name>
+        <phone>9482427</phone>
+        <email>lydia@example.com</email>
+        <address>little tokyo</address>
+        <remark></remark>
+        <image></image>
+        <expiryDate></expiryDate>
+        <tagged>friends</tagged>
+        <group>none</group>
+    </persons>
+    <persons>
+        <name>George Best</name>
+        <phone>9482442</phone>
+        <email>anna@example.com</email>
+        <address>4th street</address>
+        <remark>Likes to code</remark>
+        <image></image>
+        <expiryDate></expiryDate>
+        <tagged>friends</tagged>
+        <group>none</group>
+    </persons>
+    <persons>
+        <name>Bob Choo</name>
+        <phone>22222222</phone>
+        <email>bob@example.com</email>
+        <address>Block 123, Bobby Street 3</address>
+        <remark></remark>
+        <image></image>
+        <expiryDate>2017-10-31</expiryDate>
+        <tagged>friend</tagged>
+        <tagged>husband</tagged>
+        <group>none</group>
+    </persons>
+    <tags>owesMoney</tags>
+    <tags>friends</tags>
+    <tags>husband</tags>
+    <tags>friend</tags>
+    <groups>none</groups>
+</addressbook>

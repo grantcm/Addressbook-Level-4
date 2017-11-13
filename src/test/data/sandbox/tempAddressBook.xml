@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addressbook>
+    <persons>
+        <name>Alice Pauline</name>
+        <phone>85355255</phone>
+        <email>alice@gmail.com</email>
+        <address>123, Jurong West Ave 6, #08-111</address>
+        <remark></remark>
+        <image></image>
+        <expiryDate></expiryDate>
+        <tagged>friends</tagged>
+        <group>none</group>
+    </persons>
+    <tags>friends</tags>
+    <tags>Friends</tags>
+    <groups>none</groups>
+</addressbook>
