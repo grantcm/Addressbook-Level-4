@@ -1,4 +1,9 @@
 = TouristBook - Test Script
+:toc:
+:toc-title:
+:toc-placement: preamble
+:sectnums:
+:repoURL: https://github.com/CS2103AUG2017-T12-B4/main
 
 == How to load sample data
 Create a directory named “data” in the same file as the .jar, then place the sampledata.xml into the newly created “data” directory. Rename the file to addressbook.xml.
